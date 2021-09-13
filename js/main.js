@@ -12,14 +12,30 @@ window.addEventListener('load', (event) => {
     console.log('write the code here')
 
     const displayData =  (result)  => {
-        console.log('the data from the giphy api is', data)
+        console.log('the results from the giphy api is', result)
 
     }
 
     const fetchDataFromGiphy = async (searchText) =>  {
-        let response = await fetch('https://api.giphy.com/v1/gifs/search?q=$(searchText)&api_key=qINP93rA3n2zNbEOt8mbmfJwLOM9jh4P')
-        let data = await response.json()
-        console.log(data)
+        let response = await fetch (`https://api.giphy.com/v1/gifs/search?q=${searchText}&api_key=qINP93rA3n2zNbEOt8mbmfJwLOM9jh4P`)
+        let result = await response.json()//decoding response as json
+        //result is one big object, so everything inside result is like any other object key
+        console.log(result)
+        console.log('level 1 result.data is', result.data)
+
+        let htmlString = '';
+
+        for(let imageResult of result.data){
+            htmlString = htmlString + imageResult.url;
+            console.log('imageResult  is', imageResult)
+            console.log('imageId is', imageResult.id)
+            console.log('imageTitle is', imageResult.title)
+            console.log('imageURL is', imageResult.url)
+
+
+        }
+        console.log('final htmlstring is', htmlString)
+        document.getElementById('search-results').innerHTML = htmlString;
 
         displayData(result)
     }
