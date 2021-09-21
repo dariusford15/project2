@@ -24,18 +24,17 @@ window.addEventListener('load', (event) => {
         console.log('level 1 result.data is', result.data)
 
         let htmlString = '';
+        let img = document.querySelector('img')
 
         for(let imageResult of result.data){
-            htmlString = htmlString + imageResult.url;
             console.log('imageResult  is', imageResult)
             console.log('imageId is', imageResult.id)
             console.log('imageTitle is', imageResult.title)
             console.log('imageURL is', imageResult.url)
-
-
+            document.getElementById("search-results").innerHTML += "<img src='" + imageResult.images.downsized_large.url + "'> <br>"
         }
         console.log('final htmlstring is', htmlString)
-        document.getElementById('search-results').innerHTML = htmlString;
+        
 
         displayData(result)
     }
