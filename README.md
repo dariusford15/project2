@@ -1,0 +1,5 @@
+Name: Darius Ford
+Description: This project allows you to use a API called GIPHY to search images from a query search. Images are retrieved via their API from data fetched from GIPHY which is decoded using a the json method to create a JavaScript object. 
+Functionality: Functionality of the site is offered through the use of the input field, which allows you to type in what you want to search and the use of the search button. 
+Technologies: The technologies used are JavaScript, HTML, CSS AND SCSS.
+Future Improvement: Ideas for future improvement is to finish creating and designing the other pages of the website. As of right now the only page available is the search page. I would like to make the style of the page more appealing and modern looking. In addition, I would like to add more functionality and interactivity with JavaScript.
