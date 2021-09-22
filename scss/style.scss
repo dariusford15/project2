@@ -1,12 +1,27 @@
 $background-color: black;
 $nav-font: "Space Mono";
+$logo-font: "Gemunu Libre";
 html{
     box-sizing: border-box;
 }
 body{
     background-color: $background-color;
 }
+.container1{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 20px;
+    margin: 0;
+    justify-content: space-between;
+    background-color: gray;
+    
+}
 
+.container1 h1{
+    font-family: $logo-font;
+    font-size: 3em;
+}
 .nav-container{
     font-family: $nav-font;
     display: flex;
@@ -34,7 +49,7 @@ body{
     }
 
 
-.container{
+.container2{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -71,7 +86,7 @@ body{
         max-width: 300px;
     }
     
-    .container{
+    .container2{
         flex-direction: column;
         width: 300px;
     }
@@ -81,7 +96,12 @@ body{
         height: 100%;
         text-align: center;
         font-size: .5em;
+        margin: 0px;
+        border: 1px solid lightgray;
 
+    }
+    li{
+        border: 1px solid lightgray;
     }
     li a{
         display: block;
@@ -92,5 +112,14 @@ body{
     .button{
         width: 100%;
         margin-top: 5px;
+    }
+    .container1{
+        flex-direction: column;
+        justify-content: center;
+        background-color: lightcyan;
+    }
+    .container1 h1{
+        align-self: center;
+        height: 100%;
     }
 }

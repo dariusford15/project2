@@ -4,6 +4,19 @@ html {
 body {
   background-color: black; }
 
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0;
+  justify-content: space-between;
+  background-color: gray; }
+
+.container1 h1 {
+  font-family: "Gemunu Libre";
+  font-size: 3em; }
+
 .nav-container {
   font-family: "Space Mono";
   display: flex;
@@ -28,7 +41,7 @@ a {
 a:hover {
   background-color: red; }
 
-.container {
+.container2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -59,7 +72,7 @@ a:hover {
     flex-shrink: 1; }
   img {
     max-width: 300px; }
-  .container {
+  .container2 {
     flex-direction: column;
     width: 300px; }
   .nav-container {
@@ -67,11 +80,22 @@ a:hover {
     width: 100%;
     height: 100%;
     text-align: center;
-    font-size: .5em; }
+    font-size: .5em;
+    margin: 0px;
+    border: 1px solid lightgray; }
+  li {
+    border: 1px solid lightgray; }
   li a {
     display: block; }
   .search {
     width: 100%; }
   .button {
     width: 100%;
-    margin-top: 5px; } }
+    margin-top: 5px; }
+  .container1 {
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightcyan; }
+  .container1 h1 {
+    align-self: center;
+    height: 100%; } }
